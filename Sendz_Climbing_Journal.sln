@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33423.256
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sendz_Climbing_Journal.Android", "Sendz_Climbing_Journal\Sendz_Climbing_Journal.Android\Sendz_Climbing_Journal.Android.csproj", "{FE325CDD-91BD-4D2C-9ED0-DF984ABC4EE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sendz_Climbing_Journal", "Sendz_Climbing_Journal\Sendz_Climbing_Journal\Sendz_Climbing_Journal.csproj", "{B4F2E9C5-5C93-4934-A6C9-1C4086AFA2F7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE325CDD-91BD-4D2C-9ED0-DF984ABC4EE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE325CDD-91BD-4D2C-9ED0-DF984ABC4EE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE325CDD-91BD-4D2C-9ED0-DF984ABC4EE6}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{FE325CDD-91BD-4D2C-9ED0-DF984ABC4EE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE325CDD-91BD-4D2C-9ED0-DF984ABC4EE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE325CDD-91BD-4D2C-9ED0-DF984ABC4EE6}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{B4F2E9C5-5C93-4934-A6C9-1C4086AFA2F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4F2E9C5-5C93-4934-A6C9-1C4086AFA2F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4F2E9C5-5C93-4934-A6C9-1C4086AFA2F7}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B4F2E9C5-5C93-4934-A6C9-1C4086AFA2F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4F2E9C5-5C93-4934-A6C9-1C4086AFA2F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4F2E9C5-5C93-4934-A6C9-1C4086AFA2F7}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C06A5D38-D959-441A-8EBB-BC3FFAA7C205}
+	EndGlobalSection
+EndGlobal

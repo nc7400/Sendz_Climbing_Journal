@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            SelectedTabColor="IndianRed"
+            UnselectedTabColor="FloralWhite"
+            BarBackgroundColor="#565656"
+            
+            x:Class="Sendz_Climbing_Journal.Views.Dashboard"
+            NavigationPage.HasBackButton="False">
+    
+    <NavigationPage.TitleView>
+        <Label x:Name="UserTitle" TextColor="FloralWhite" FontSize="Medium" Padding="0, 10"/>
+    </NavigationPage.TitleView>
+
+    <TabbedPage.ToolbarItems>
+        <ToolbarItem x:Name="UpdateUser" Text="Update User Info" Clicked="UpdateUser_Clicked"
+                     Order="Secondary"/>
+        <ToolbarItem x:Name="Logout" Text="Logout" Clicked="Logout_Clicked"
+                     Order="Secondary"/>
+    </TabbedPage.ToolbarItems>
+
+    <ContentPage Title="Outdoor Climbs" BackgroundColor="#CFCFCF">
+        <StackLayout>
+
+            <SearchBar Placeholder="Search by Name, Grade, Crag, Type, or Date" x:Name="CragSearchBar" TextChanged="CragSearchBar_TextChanged"
+                       BackgroundColor="FloralWhite" FontSize="17"/>
+
+            <Label x:Name="CragResultsCount" HorizontalOptions="Center" FontSize="18"/>
+
+            <CollectionView x:Name="CragCollectionView"
+                            ItemsSource="{Binding Crag}"
+                            EmptyView="No Logs to Display"
+                            SelectionMode="Single"
+                            SelectionChanged="CragCollectionView_SelectionChanged">
+
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="5"/>
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            
+                            <Grid Padding="5" RowSpacing="2" ColumnSpacing="15" BackgroundColor="FloralWhite">
+                                
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label Text="{Binding Name}" Grid.Row="0" FontAttributes="Bold" VerticalTextAlignment="Center"
+                                       TextColor="IndianRed" FontSize="18"/>
+                                <Label Text="{Binding Grade}" Grid.Row="1" VerticalTextAlignment="Center" FontSize="15"/>
+                                <Label Text="{Binding Type}" Grid.Row="2" VerticalTextAlignment="Center" FontSize="15"/>
+                                <Label Text="{Binding CragName}" Grid.Row="3" VerticalTextAlignment="Center" FontSize="15"/>
+                                <Label Text="{Binding SendDate, StringFormat='{0:M/dd/yyyy}'}" Grid.Row="4" 
+                                       VerticalTextAlignment="Center" FontSize="15"/>
+
+                            </Grid>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+                
+            </CollectionView>
+            <Button x:Name="CragLogButton" Text="Log A Climb" Clicked="CragLogButton_Clicked" 
+                    HorizontalOptions="Center" HeightRequest="45" CornerRadius="5" BackgroundColor="#565656" 
+                    TextColor="FloralWhite" Padding="150, 5"/>
+            <Label Padding="-10"/>
+            
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Gym Climbs" BackgroundColor="#CFCFCF">
+        <StackLayout>
+            
+            
+            
+            <SearchBar Placeholder="Search Gym Name, Grade, or Date" x:Name="GymSearchBar" TextChanged="GymSearchBar_TextChanged"
+                       BackgroundColor="FloralWhite"/>
+
+            <Label x:Name="GymResultsCount" HorizontalOptions="Center" FontSize="18"/>
+
+            <CollectionView x:Name="GymCollectionView"
+                            ItemsSource="{Binding Gym}"
+                            EmptyView="No Logs to Display"
+                            SelectionMode="Single"
+                            SelectionChanged="GymCollectionView_SelectionChanged">
+
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="5"/>
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Grid Padding="5" RowSpacing="2" ColumnSpacing="15" BackgroundColor="FloralWhite">
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label Text="{Binding Grade}" Grid.Row="0" FontAttributes="Bold" VerticalTextAlignment="Center"
+                                       TextColor="IndianRed" FontSize="18"/>
+                                <Label Text="{Binding GymName}" Grid.Row="1" VerticalTextAlignment="Center" FontSize="15"/>
+                                <Label Text="{Binding Type}" Grid.Row="2" VerticalTextAlignment="Center" FontSize="15"/>
+                                <Label Text="{Binding SendDate, StringFormat='{0:M/dd/yyyy}'}" Grid.Row="3" 
+                                       FontSize="15" VerticalTextAlignment="Center"/>
+
+                            </Grid>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+
+            <Button x:Name="GymLogButton" Text="Log A Climb" Clicked="GymLogButton_Clicked"
+                    HorizontalOptions="Center" HeightRequest="45" CornerRadius="5" BackgroundColor="#565656" 
+                    TextColor="FloralWhite" Padding="150, 5"/>
+            <Label Padding="-10"/>
+
+        </StackLayout>
+        
+    </ContentPage>
+    
+</TabbedPage>
+
+<!--:TabbedPage.ToolbarPlacement="Bottom"-->

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Sendz_Climbing_Journal.Views.UserEdit"
+             Title="Edit User Information">
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <Label Text="Enter Your Information" HorizontalOptions="Center" FontSize="Large"
+                   Padding="1, 50, 1, 60"/>
+            <Entry Text="{Binding Name}" x:Name="UserName" VerticalOptions="Center"/>
+            <Entry Text="{Binding Email}" x:Name="UserEmail" VerticalOptions="Center"/>
+            <Entry Text="{Binding Password}" x:Name="UserPassword" VerticalOptions="Center"
+                   IsPassword="True"/>
+            <Entry Text="{Binding Password}" x:Name="MatchingPassword" VerticalOptions="Center"
+                   IsPassword="True"/>
+            <Label Padding="1, 20, 1, 1"/>
+            <Button Text="Save Edit" x:Name="SaveEditButton" Clicked="SaveEditButton_Clicked" 
+                    HorizontalOptions="Center" BackgroundColor="#565656" CornerRadius="5" Padding="165, 1"
+                    TextColor="FloralWhite"/>
+            <Label Padding="-5"/>
+            <Button Text="Delete User" x:Name="DeleteButton" Clicked="DeleteButton_Clicked" 
+                    HorizontalOptions="Center" BackgroundColor="#565656" CornerRadius="5" Padding="155, 1"
+                    TextColor="FloralWhite"/>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

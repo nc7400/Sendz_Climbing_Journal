@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Sendz_Climbing_Journal.Views.UserAdd"
+             Title="Add New User">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Enter Your Information" HorizontalOptions="Center" FontSize="Large"
+                   Padding="1, 50, 1, 60"/>
+            <Entry Placeholder="Enter Your Name" x:Name="UserName" VerticalOptions="Center"/>
+            <Entry Placeholder="Enter Email" x:Name="UserEmail" VerticalOptions="Center"/>
+            <Entry Placeholder="Enter Password" x:Name="UserPassword" VerticalOptions="Center"
+                   IsPassword="True"/>
+            <Entry Placeholder="Re-Enter Your Password" x:Name="MatchingPassword" VerticalOptions="Center"
+                   IsPassword="True"/>
+            <Label Padding="1, 20, 1, 1"/>
+            <Button Text="Sign Up" x:Name="SignUpButton" Clicked="SignUpButton_Clicked" 
+                    HorizontalOptions="Center" BackgroundColor="#565656" CornerRadius="5" Padding="165, 1"
+                    TextColor="FloralWhite"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

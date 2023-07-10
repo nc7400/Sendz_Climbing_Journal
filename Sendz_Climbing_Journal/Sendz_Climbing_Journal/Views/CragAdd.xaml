@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Sendz_Climbing_Journal.Views.CragAdd"
+             Title="Add a Climb Log"
+             Background="#CFCFCF">
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid Padding="5" RowSpacing="1" ColumnSpacing="1" BackgroundColor="FloralWhite">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Name: " Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" FontSize="Medium"/>
+                <Entry Placeholder="Enter Climb Name" x:Name="ClimbName" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"
+                           VerticalTextAlignment="Center"/>
+
+                <Label Text="Crag: " Grid.Row="1" Grid.Column="0" VerticalTextAlignment="Center" FontSize="Medium"/>
+                <Entry Placeholder="Enter Crag Name" x:Name="CragName" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"
+                           VerticalTextAlignment="Center"/>
+
+                <Label Text="State: " Grid.Row="2" Grid.Column="0" VerticalTextAlignment="Center" FontSize="Medium"/>
+                <Picker Title="Pick a State" x:Name="StatePicker" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2">
+                    <Picker.Items>
+                        <x:String>AL</x:String>
+                        <x:String>AK</x:String>
+                        <x:String>AZ</x:String>
+                        <x:String>AR</x:String>
+                        <x:String>CA</x:String>
+                        <x:String>CO</x:String>
+                        <x:String>CT</x:String>
+                        <x:String>DE</x:String>
+                        <x:String>DC</x:String>
+                        <x:String>FL</x:String>
+                        <x:String>GA</x:String>
+                        <x:String>HI</x:String>
+                        <x:String>ID</x:String>
+                        <x:String>IL</x:String>
+                        <x:String>IN</x:String>
+                        <x:String>IA</x:String>
+                        <x:String>KS</x:String>
+                        <x:String>KY</x:String>
+                        <x:String>LS</x:String>
+                        <x:String>ME</x:String>
+                        <x:String>MD</x:String>
+                        <x:String>MA</x:String>
+                        <x:String>MI</x:String>
+                        <x:String>MN</x:String>
+                        <x:String>MS</x:String>
+                        <x:String>MO</x:String>
+                        <x:String>MT</x:String>
+                        <x:String>NE</x:String>
+                        <x:String>NV</x:String>
+                        <x:String>NH</x:String>
+                        <x:String>NJ</x:String>
+                        <x:String>NM</x:String>
+                        <x:String>NY</x:String>
+                        <x:String>NC</x:String>
+                        <x:String>ND</x:String>
+                        <x:String>OH</x:String>
+                        <x:String>OK</x:String>
+                        <x:String>OR</x:String>
+                        <x:String>PA</x:String>
+                        <x:String>RI</x:String>
+                        <x:String>SC</x:String>
+                        <x:String>SD</x:String>
+                        <x:String>TN</x:String>
+                        <x:String>TX</x:String>
+                        <x:String>UT</x:String>
+                        <x:String>VT</x:String>
+                        <x:String>VA</x:String>
+                        <x:String>WA</x:String>
+                        <x:String>WV</x:String>
+                        <x:String>WI</x:String>
+                        <x:String>WY</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Label Text="Type: " Grid.Row="3" Grid.Column="0" VerticalTextAlignment="Center" FontSize="Medium"/>
+                <Picker Title="Pick a Type" x:Name="TypePicker" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2">
+                    <Picker.Items>
+                        <x:String>Sport</x:String>
+                        <x:String>Trad</x:String>
+                        <x:String>Boulder</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Label Text="Grade: " Grid.Row="4" Grid.Column="0" VerticalTextAlignment="Center" FontSize="Medium"/>
+                <Picker Title="Pick a Grade" x:Name="GradePicker" Grid.Row="4" Grid.Column="1">
+                    <Picker.Items>
+                        <x:String>V</x:String>
+                        <x:String>5.8</x:String>
+                        <x:String>5.9</x:String>
+                        <x:String>5.10</x:String>
+                        <x:String>5.11</x:String>
+                        <x:String>5.12</x:String>
+                        <x:String>5.13</x:String>
+                        <x:String>5.14</x:String>
+                        <x:String>5.15</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Picker Title="Pick a Sub-Grade" x:Name="SubGradePicker" Grid.Row="4" Grid.Column="2">
+                    <Picker.Items>
+                        <x:String>-</x:String>
+                        <x:String>+</x:String>
+                        <x:String>a</x:String>
+                        <x:String>b</x:String>
+                        <x:String>c</x:String>
+                        <x:String>d</x:String>
+                        <x:String>0</x:String>
+                        <x:String>1</x:String>
+                        <x:String>2</x:String>
+                        <x:String>3</x:String>
+                        <x:String>4</x:String>
+                        <x:String>5</x:String>
+                        <x:String>6</x:String>
+                        <x:String>7</x:String>
+                        <x:String>8</x:String>
+                        <x:String>9</x:String>
+                        <x:String>10</x:String>
+                        <x:String>11</x:String>
+                        <x:String>12</x:String>
+                        <x:String>13</x:String>
+                        <x:String>14</x:String>
+                        <x:String>15</x:String>
+                        <x:String>16</x:String>
+                        <x:String>17</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Label Text="Sent: " Grid.Row="5" Grid.Column="0" VerticalTextAlignment="Center" FontSize="Medium"/>
+                <Switch Grid.Row="5" Grid.Column="2" x:Name="SentSwitch" HorizontalOptions="End" IsToggled="False"/>
+
+                <Label Text="Send Type: " Grid.Row="6" Grid.Column="0" VerticalTextAlignment="Center" FontSize="Medium"/>
+                <Picker Title="Pick a Type" x:Name="SendTypePicker" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2">
+                    <Picker.Items>
+                        <x:String>Open Project</x:String>
+                        <x:String>Onsight</x:String>
+                        <x:String>Flash</x:String>
+                        <x:String>Redpoint</x:String>
+                        <x:String>Closed Project</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Label Text="Log Date: " Grid.Row="7" Grid.Column="0" VerticalTextAlignment="Center" FontSize="Medium"/>
+                <DatePicker x:Name="SendDatePicker" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2" 
+    />
+
+                <Label Text="Notes: " Grid.Row="8" Grid.Column="0" VerticalTextAlignment="Center" FontSize="Medium"/>
+                <Entry Placeholder="Enter Climb Notes" x:Name="LogNotes" Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="2" 
+                           VerticalTextAlignment="Center"/>
+
+            </Grid>
+
+            <Label Padding="-5"/>
+
+            <Button Text="Save" x:Name="SaveClimbButton" Clicked="SaveClimbButton_Clicked"
+                        FontSize="17" HorizontalOptions="Center" HeightRequest="45" CornerRadius="5"
+                        BackgroundColor="#565656" TextColor="FloralWhite" Padding="171, 0"/>
+
+            <Label Padding="-5"/>
+
+            <Button Text="Cancel" x:Name="CancelButton" Clicked="CancelButton_Clicked"
+                        FontSize="17" HorizontalOptions="Center" HeightRequest="45" CornerRadius="5"
+                        BackgroundColor="#565656" TextColor="FloralWhite" Padding="160, 0"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

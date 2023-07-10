@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Sendz_Climbing_Journal.Views.AppSettings"
+             Title="Settings">
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <Label Padding="1, 90"/>
+            
+            <Button x:Name="ClearPreferences" Text="Clear Preferences" HorizontalOptions="Center" Padding="125, 0"
+                    Clicked="ClearPreferences_Clicked" HeightRequest="45" CornerRadius="5"
+                    BackgroundColor="#565656" TextColor="FloralWhite"/>
+
+            <Label/>
+            
+            <Button x:Name="LoadSampleData" Text="Load Sample Data" HorizontalOptions="Center" Padding="130, 0"
+                    Clicked="LoadSampleData_Clicked" HeightRequest="45" CornerRadius="5"
+                    BackgroundColor="#565656" TextColor="FloralWhite"/>
+
+            <Label/>
+            
+            <Button x:Name="ClearSampleData" Text="Clear Sample Data" HorizontalOptions="Center" Padding="125, 0"
+                    Clicked="ClearSampleData_Clicked" HeightRequest="45" CornerRadius="5"
+                    BackgroundColor="#565656" TextColor="FloralWhite"/>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
